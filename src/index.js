@@ -1,9 +1,27 @@
-import "./styles.css";
+import "./styles.scss";
+ 
+const setBackground = () => {
+  fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")      
+    .then(response => response.json())
+    .then(data => {
 
-fetch(
-  "https://api.unsplash.com/photos/random/?client_id=UKfhcy7SF1QT794tRwRsGHiJtgCXR0_X5FvTQVscXFE&orientation=landscape&query=nature"
-)
-  .then(response => response.json())
-  .then(data => {
-    document.body.style.backgroundImage = `url(${data.urls.full})`
-  });
+      $('body').css('backgroundImage', `url(${data.urls.full})`)
+      $('.author').html(`
+      by <a class='author-link' href=${data.user.links.html} target='_blank'>${data.user.username}</a>
+      `)
+
+    });
+}
+
+window.onload = setBackground();
+
+
+$('.imgBtn').click(e => setBackground())
+
+//------------------------------------------------
+
+
+
+
+
+

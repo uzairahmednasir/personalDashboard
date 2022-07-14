@@ -1,0 +1,44 @@
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-shadow: 1px 1px 2px #474747;
+  padding: 10px;
+}
+
+.author {
+  font-size: 18px;
+
+  .author-link {
+    text-decoration: none;
+    color: white;
+    &:active {
+      color: rgb(76, 0, 255)
+    }
+  }
+}
+
+
+.imgBtn {
+  color: white;
+  font-size: 15px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.473);
+  border: none;
+  border-radius: 5px;
+  &:active {
+    background-color: rgb(71, 120, 253);
+    transform: translate(-0.5px, -0.5px);
+    box-shadow: 0px 1px 3px gray inset;
+  }
+}
