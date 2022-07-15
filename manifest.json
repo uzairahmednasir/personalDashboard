@@ -7,6 +7,6 @@
       "default_icon": "https://img.icons8.com/color/48/000000/dashboard-layout.png"
   },
   "chrome_url_overrides": {
-      "newtab": "index.html"
+      "newtab": "lifeisgoodgreen.netlify.app"
   }
 }
