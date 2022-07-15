@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Personal Dashboard",
+  "version": "1.0.0",
+  "description": "Simple Dashboard Project",
+  "action": {
+      "default_icon": "https://img.icons8.com/color/48/000000/dashboard-layout.png"
+  },
+  "chrome_url_overrides": {
+      "newtab": "index.html"
+  }
+}
