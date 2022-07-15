@@ -78,6 +78,9 @@ body {
   grid-area: content;
   justify-self: center;
   align-self: center;
+  .content__time {
+    font-size: 5rem;
+  }
   .content__btn {
     margin: auto;
     color: white;
