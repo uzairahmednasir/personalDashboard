@@ -69,7 +69,8 @@ fetch('https://api.coingecko.com/api/v3/coins/bitcoin')
       <p>👇: $${data.market_data.low_24h.usd}</p>
     `)
 
-  });
+  })
+  .catch(err => console.error(err));
 
 //------------------------------------------------
 
@@ -83,6 +84,23 @@ setInterval(updateTime, 1000)
 //-------------------------------------------------
 
 // weather
+navigator.geolocation.getCurrentPosition(position => {
+  const {latitude: lat, longitude: lon} = position.coords;
+  fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric`)
+    .then(res => {
+      if(!res.ok) {
+        throw Error("Weather data not available")
+      }
+      return res.json()
+    })
+    .then(data => {
+      const iconUrl = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+      $('.top__weather').html(`
+        <img src=${iconUrl} />
+        <p>${Math.round(data.main.temp)}&deg;</p>
+        <p>${data.name}</p>
+      `)
 
-
-
+    })
+    .catch(err => console.error(err)) ;  
+});
