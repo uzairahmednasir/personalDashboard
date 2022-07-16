@@ -7,4 +7,4 @@
 - <a href='https://www.coingecko.com/en/api/documentation'> CoinGecko </a>
 - <a href='https://openweathermap.org/api'> OpenWeather </a>
 
-<a href='https://codesandbox.io/s/github/uzairahmednasir/personalDashboard'>OPEN CODESANDBOX SITE</a>
+<a href='https://codesandbox.io/s/github/uzairahmednasir/personalDashboard'>codesandbox site</a>
