@@ -66,7 +66,7 @@ body {
     }
     img {
       width: 80px;
-      filter: invert(100%) hue-rotate(222deg) brightness(119%) contrast(115%);
+      // filter: invert(100%) hue-rotate(222deg) brightness(119%) contrast(115%);
     }
   }
 }
@@ -112,4 +112,14 @@ body {
     }
   }
 }
+
+
+
+@media only screen and (max-width: 600px){
+	* {
+    font-size: 1.5em;
+    border: solid 3px red
+  }
+}
+
 
